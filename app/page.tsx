@@ -1,7 +1,6 @@
-
 "use client";
 
-import { useState } from "react";
+import { useState, type FormEvent } from "react";
 
 type Result = {
   srt: string;
@@ -14,7 +13,7 @@ export default function SrtGeneratorPage() {
   const [error, setError] = useState<string | null>(null);
   const [result, setResult] = useState<Result | null>(null);
 
-  async function handleGenerate(e: React.FormEvent) {
+  async function handleGenerate(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
     setLoading(true);

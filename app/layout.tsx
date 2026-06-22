@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import type { ReactNode } from 'react';
 import { Space_Grotesk, Inter, IBM_Plex_Mono } from 'next/font/google';
 import './globals.css';
 
@@ -26,13 +27,13 @@ const plexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   title: 'SRT Generator — Subtitles for YouTube',
   description:
-    'Turn a transcript into a timed .srt subtitle file for YouTube, automatically.',
+    'Turn a YouTube URL into a timed .srt subtitle file, automatically.',
 };
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
 }) {
   return (
     <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable} ${plexMono.variable}`}>

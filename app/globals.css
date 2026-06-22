@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html, body {
+  background-color: #15161A;
+}
+
+* {
+  scrollbar-color: #34373F #1F2127;
+  scrollbar-width: thin;
+}
+
+@layer utilities {
+  .focus-glow:focus {
+    outline: none;
+    box-shadow: 0 0 0 1px rgba(242, 165, 60, 0.5), 0 0 18px rgba(242, 165, 60, 0.18);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
